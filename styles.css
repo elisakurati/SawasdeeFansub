@@ -180,3 +180,41 @@ ul li a:hover {
     background-color: #006699;
     transform: scale(1.05);
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .imagem-suer img {
+        max-width: 100%;
+    }
+
+    ul li a {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .botao-telegram a {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 24px;
+    }
+
+    ul li a {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .botao-telegram a {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
