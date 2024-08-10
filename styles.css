@@ -2,17 +2,18 @@
 html, body {
     height: 100%;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('img/Fundo-tela2.png'); /* Caminho da imagem de fundo */
-    background-size: 80%;
-    background-size: cover; /* Faz a imagem cobrir toda a área */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-image: url('img/Fundo-tela2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Cabeçalho e Rodapé */
@@ -27,31 +28,35 @@ header, footer {
 
 footer {
     background-color: #f1f1f1;
-    text-align: center;
-    padding: 10px 0;
+    color: #333;
 }
 
 /* Conteúdo Principal */
 main {
-    flex: 1; /* Isso faz com que o main ocupe todo o espaço disponível entre o header e o footer */
+    flex: 1;
+    padding: 20px;
 }
 
-/* Outras Estilizações */
+/* Navegação */
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    text-align: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: inline-block;
+    margin: 0 10px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 16px;
 }
 
+/* Títulos e Texto */
 h2, h1 {
     margin-top: 20px;
     text-align: center;
@@ -64,76 +69,25 @@ p {
     font-weight: bold;
 }
 
-.imgBandeira {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.imgBandeira img {
-    max-width: 300px;
-    height: auto;
-    cursor: pointer;
-    width: 450px;
-}
-
-.suer img {
-    width: 100%;
-    max-width: 400px;
-    display: block;
-    margin: 20px auto;
-    cursor: pointer;
-}
-
-.suer h1, .suer img {
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.suer h1:hover, .suer img:hover {
-    transform: scale(1.05);
-}
-
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-label, input, textarea, button {
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 10px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #555;
-}
-
 /* Imagem da Série */
-.imagem-suer img {
+.imagem-suer, .suer {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.imagem-suer img, .suer img {
     width: 100%;
     max-width: 600px;
-    max-height: 480px;
-    display: block;
-    margin: 20px auto;
+    height: auto;
     cursor: pointer;
     transition: transform 0.2s;
 }
 
-.imagem-suer img:hover {
+.imagem-suer img:hover, .suer img:hover {
     transform: scale(1.05);
 }
 
-* Links de Assista */
+/* Links para Assistir */
 ul {
     list-style: none;
     padding: 0;
@@ -181,6 +135,44 @@ ul li a:hover {
     transform: scale(1.05);
 }
 
+/* Formulário de Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label, input, textarea, button {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionar apenas na vertical */
+}
+
+/* Botões do Formulário */
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     nav ul li {
@@ -188,7 +180,7 @@ ul li a:hover {
         margin: 10px 0;
     }
 
-    .imagem-suer img {
+    .imagem-suer img, .suer img {
         max-width: 100%;
     }
 
@@ -200,6 +192,15 @@ ul li a:hover {
     .botao-telegram a {
         padding: 10px 20px;
         font-size: 14px;
+    }
+
+    form {
+        padding: 10px;
+    }
+
+    label, input, textarea, button {
+        width: 90%;
+        max-width: none;
     }
 }
 
@@ -216,5 +217,29 @@ ul li a:hover {
     .botao-telegram a {
         padding: 8px 16px;
         font-size: 12px;
+    }
+
+    form {
+        padding: 5px;
+    }
+
+    label, input, textarea, button {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* Responsividade para Imagem de Fundo */
+@media (max-width: 768px) {
+    body {
+        background-size: cover; /* Continua cobrindo o contêiner */
+        background-position: center top; /* Ajusta a posição para focar em partes importantes */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-size: cover; /* Continua cobrindo o contêiner */
+        background-position: center; /* Ajusta para centralizar a imagem em dispositivos menores */
     }
 }
