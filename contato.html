@@ -10,14 +10,30 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="index.html">Início</a></li>
-                <li><a href="series.html">Séries</a></li>
-                <li><a href="contato.html">Contato</a></li>
-            </ul>
+            <div class="logo">
+                <img src="img/SAWASDEE23.png" alt="">
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="series.html" class="nav-link">Séries</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>    
+                </ul>
+            </div>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="img/menu-white.svg" alt=""></button>
+            </div>
         </nav>
-    </header>
 
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="series.html" class="nav-link">Séries</a></li>
+                <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>    
+            </ul>
+
+        </div>
+    </header>
     <main>
         <section id="contato">
             <h2>Contato</h2>
