@@ -1,4 +1,3 @@
-/* Geral */
 html, body {
     height: 100%;
     margin: 0;
@@ -10,7 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('img/Fundo-tela2.png');
+    background-image: url('img/paperdrow.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -20,7 +19,7 @@ body {
 /* Cabeçalho e Rodapé */
 header, footer {
     width: 100%;
-    background-color: transparent; /* RGBA com 50% de transparência */
+    background-color: transparent;
     color: #fff;
     text-align: center;
     padding: 5px 0;
@@ -36,7 +35,7 @@ header, footer {
 }
 
 .logo img {
-    height: 50px;
+    height: 70px;
     width: auto;
 }
 
@@ -106,12 +105,13 @@ nav ul li a {
 h2, h1 {
     margin-top: 20px;
     text-align: center;
-    color: #4169E1;
+    color: #fa0303;
+    font-weight: bold;
 }
 
 p {
     text-align: center;
-    color: #800000;
+    color: #014c52;
     font-weight: bold;
 }
 
@@ -150,7 +150,7 @@ ul li a {
     text-decoration: none;
     font-weight: bold;
     padding: 10px 20px;
-    background-color: #4169E1;
+    background-color: #dc41e1;
     border-radius: 5px;
     transition: background-color 0.2s;
 }
@@ -170,7 +170,7 @@ ul li a:hover {
     text-decoration: none;
     font-weight: bold;
     padding: 12px 24px;
-    background-color: #0088cc;
+    background-color: #dc41e1;
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.2s;
     display: inline-block;
